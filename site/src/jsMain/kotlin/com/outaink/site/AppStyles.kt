@@ -3,16 +3,12 @@ package com.outaink.site
 import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.*
-import com.varabyte.kobweb.silk.components.forms.ButtonStyle
-import com.varabyte.kobweb.silk.components.forms.ButtonVars
 import com.varabyte.kobweb.silk.components.layout.HorizontalDividerStyle
 import com.varabyte.kobweb.silk.init.InitSilk
 import com.varabyte.kobweb.silk.init.InitSilkContext
 import com.varabyte.kobweb.silk.init.registerStyleBase
 import com.varabyte.kobweb.silk.style.CssStyle
-import com.varabyte.kobweb.silk.style.addVariantBase
 import com.varabyte.kobweb.silk.style.base
 import com.varabyte.kobweb.silk.theme.colors.palette.color
 import com.varabyte.kobweb.silk.theme.colors.palette.toPalette
@@ -58,12 +54,4 @@ val SubheadlineTextStyle = CssStyle.base {
         .fontSize(1.cssRem)
         .textAlign(TextAlign.Start)
         .color(colorMode.toPalette().color.toRgb().copyf(alpha = 0.8f))
-}
-
-val CircleButtonVariant = ButtonStyle.addVariantBase {
-    Modifier.padding(0.px).borderRadius(50.percent)
-}
-
-val UncoloredButtonVariant = ButtonStyle.addVariantBase {
-    Modifier.setVariable(ButtonVars.BackgroundDefaultColor, Colors.Transparent)
 }

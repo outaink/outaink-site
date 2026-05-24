@@ -3,8 +3,10 @@
 build
 out
 kotlin-js-store
+.run-logs/
 
 # IntelliJ ignores
+.idea/
 *.iml
 /*.ipr
 

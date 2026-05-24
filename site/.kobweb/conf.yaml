@@ -1,5 +1,6 @@
 site:
-  title: "Outaink Site"
+  title: "Outaink | 个人主页"
+  basePath: "/outaink-site"
 
 server:
   files:
