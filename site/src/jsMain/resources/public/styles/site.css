@@ -116,6 +116,10 @@
       gap: 44px;
     }
 
+    .hero > * {
+      min-width: 0;
+    }
+
     .eyebrow {
       width: fit-content;
       margin: 0 0 18px;
@@ -141,17 +145,20 @@
       font-size: clamp(2.6rem, 8vw, 6.7rem);
       line-height: 0.95;
       letter-spacing: 0;
+      overflow-wrap: anywhere;
       text-shadow:
         4px 4px 0 var(--sun),
         8px 8px 0 rgba(143, 57, 40, 0.28);
     }
 
     .intro {
+      width: 100%;
       max-width: 660px;
       margin-bottom: 30px;
       font-size: clamp(1rem, 2vw, 1.2rem);
       line-height: 1.8;
       font-weight: 700;
+      overflow-wrap: anywhere;
     }
 
     .hero-actions {
@@ -929,6 +936,11 @@
     }
 
     @media (max-width: 620px) {
+      .hero,
+      .section-inner {
+        width: min(1120px, calc(100% - 32px));
+      }
+
       .nav {
         min-height: auto;
         padding: 14px 0;
@@ -948,6 +960,18 @@
 
       .hero {
         padding-bottom: 36px;
+      }
+
+      h1 {
+        font-size: 2.1rem;
+        line-height: 1.12;
+      }
+
+      .intro {
+        max-width: calc(100vw - 48px);
+        font-size: 0.95rem;
+        line-height: 1.75;
+        word-break: break-all;
       }
 
       .profile-list li,

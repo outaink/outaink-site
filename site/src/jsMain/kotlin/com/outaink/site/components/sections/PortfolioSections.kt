@@ -64,9 +64,9 @@ fun HeroSection() {
     Section(attrs = { classes("hero"); attr("aria-labelledby", "hero-title") }) {
         Div {
             P(attrs = { classes("eyebrow") }) { Text("INSTA360 · ANDROID · CREATOR") }
-            H1(attrs = { attr("id", "hero-title") }) { Text("你好，我是 Outaink。") }
+            H1(attrs = { attr("id", "hero-title") }) { Text("你好，我是 Outaink") }
             P(attrs = { classes("intro") }) {
-                Text("为热爱出发，勇闯消费电子行业。从华科建筑系的图纸到 NYU 的算法竞赛，从 1037 树洞空间到 Insta360 的影像世界——我一直在寻找代码与产品的交汇点。这里记录我的项目、随笔和生活灵感。")
+                Text("从华科建筑系的图纸，到 NYU 夜里的算法题，再到 Insta360 的影像现场，代码有时像一条小路，带我走向产品、城市，也走向一些尚未说完的生活")
             }
             Div(attrs = { classes("hero-actions") }) {
                 A(href = "#works", attrs = { classes("pixel-button") }) { Text("查看项目") }
@@ -104,16 +104,16 @@ private fun ProfileItem(label: String, value: String) {
 fun AboutSection() {
     Section(attrs = { classes("about-band"); attr("id", "about") }) {
         Div(attrs = { classes("section-inner") }) {
-            SectionTitle("个人简介")
+            SectionTitle("关于我")
             Div(attrs = { classes("about-grid") }) {
                 P(attrs = { classes("bio-text") }) {
-                    Text("从华科建筑系转专业到软件工程，到 NYU 计算机硕士毕业，如今在 Insta360 做消费电子——每一步都是因为对「做出好东西」的执着。这个主页保留像素感，因为它像代码里的小方块：简单、明确，拼起来就能形成一个世界。")
+                    Text("曾经画建筑的线，后来写软件的行，一路从华科到纽约，再回到深圳的海风里，仍然相信小而确定的东西：一个界面、一段代码、一件慢慢成形的作品")
                 }
                 Div(attrs = { classes("skill-board"); attr("aria-label", "技能列表") }) {
-                    Skill("Kotlin / Android", "从 HUST 的 1037 树洞空间到 Insta360，用 Android 把产品带给真实用户。")
-                    Skill("编程语言 & 虚拟机", "用 Kotlin 和 C 造轮子：解释器、栈式虚拟机和语言运行时实验。")
-                    Skill("产品工程", "经历飞书、小米、Bilibili 的实习，感受不同规模产品的工程节奏。")
-                    Skill("算法 & 竞赛", "NYU Leetcode Bootcamp 2025 Top 1，享受把复杂问题拆解成清晰步骤的过程。")
+                    Skill("Kotlin / Android", "从校园里的 1037 树洞，到影像产品的真实现场，慢慢把想法放进口袋里的屏幕")
+                    Skill("编程语言 & 虚拟机", "写解释器和小小的虚拟机，像在纸上搭一间能运行的房子")
+                    Skill("产品工程", "在飞书、小米、Bilibili 的不同节奏里，学会让工程贴近人的日常")
+                    Skill("算法 & 竞赛", "NYU Leetcode Bootcamp 2025 Top 1，复杂问题拆开以后，也会有清亮的一面")
                 }
             }
         }
@@ -140,7 +140,7 @@ private fun Skill(title: String, text: String) {
 fun ProjectsSection() {
     Section(attrs = { attr("id", "works") }) {
         Div(attrs = { classes("section-inner") }) {
-            SectionTitle("GitHub 项目")
+            SectionTitle("写过的项目")
             Div(attrs = { classes("works-grid") }) {
                 pinnedRepos.forEach { ProjectCard(it) }
             }
@@ -179,7 +179,7 @@ private fun ProjectCard(repo: GitHubRepo) {
 fun FootprintsSection(footprint: Footprint = currentFootprint) {
     Section(attrs = { classes("footprints-band"); attr("id", "footprints") }) {
         Div(attrs = { classes("section-inner") }) {
-            SectionTitle("我的足迹")
+            SectionTitle("停留过的地方")
             Div(attrs = { classes("footprints-layout") }) {
                 Div(attrs = { classes("map-frame"); attr("aria-label", "以中国为中心的世界地图，标记深圳中国") }) {
                     Div(attrs = { classes("map-stage"); attr("role", "img"); attr("aria-label", "真实世界地图，中心区域为中国与东亚") }) {
@@ -231,8 +231,8 @@ fun ContactSection() {
     Section(attrs = { classes("contact-band"); attr("id", "contact") }) {
         Div(attrs = { classes("section-inner", "contact-layout") }) {
             Div {
-                H2 { Text("保持创造，保持记录。") }
-                P { Text("这里是 Outaink 的个人像素主页：记录学习经历、项目实验、生活灵感和日常随笔。欢迎从 GitHub 或个人站继续了解我。") }
+                H2 { Text("慢慢写，也慢慢生活") }
+                P { Text("这个像素小站，收着一些项目、路过的城市、技术里的念头，以及生活偶尔留下的光；若你愿意，可以从 GitHub 或个人站继续往下看") }
             }
             Div(attrs = { classes("contact-links"); attr("aria-label", "联系方式") }) {
                 ExternalLink("https://github.com/outaink", text = "github.com/outaink")
